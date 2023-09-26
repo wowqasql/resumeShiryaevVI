@@ -55,12 +55,18 @@ setInterval(() => {
 }, 1000)
 
 window.addEventListener("scroll", () => {
+	if (window.scrollY >= 0) {
+		const unexpected4 = document.querySelector('.line')
+		unexpected4.style.background = `linear-gradient(blueviolet 0 0) 0% 100% /100% 4px no-repeat`
+		unexpected4.style.transition = `2s, background-size 2s 1.5s`
+
+	}
 
 	if (window.scrollY >= 100) {
 		const thick3 = document.querySelector('.thick-3')
 		thick3.style.background = `linear-gradient(#E3C53A 0 0) 0% calc(-3px - 100%) /100% 200% no-repeat`
 		thick3.style.transition = `1s, background-position 1s 1s, color 1s 1s`
-		thick3.style.backgroundPosition = `50% 0%`
+		thick3.style.backgroundPosition = `0% 0%`
 		thick3.style.color = `#000`
 	}
 
