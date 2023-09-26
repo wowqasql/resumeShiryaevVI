@@ -56,9 +56,9 @@ setInterval(() => {
 
 window.addEventListener("scroll", () => {
 	if (window.scrollY >= 0) {
-		const unexpected4 = document.querySelector('.line')
-		unexpected4.style.background = `linear-gradient(blueviolet 0 0) 0% 100% /100% 4px no-repeat`
-		unexpected4.style.transition = `2s, background-size 2s 1.5s`
+		const line = document.querySelector('.line')
+		line.style.background = `linear-gradient(blueviolet 0 0) 0% 100% /100% 4px no-repeat`
+		line.style.transition = `2s, background-size 2s 1.5s`
 
 	}
 
