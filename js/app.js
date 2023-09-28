@@ -45,19 +45,12 @@ window.onblur = function () {
 }
 
 // Animations
-const fading5 = document.querySelector('.fading-5')
 
-
-setInterval(() => {
-	fading5.style.backgroundPosition = `bottom left`
-	fading5.style.backgroundSize = `0 0`
-
-}, 1000)
 
 window.addEventListener("scroll", () => {
 	if (window.scrollY >= 0) {
 		const line = document.querySelector('.line')
-		line.style.background = `linear-gradient(blueviolet 0 0) 0% 100% /100% 4px no-repeat`
+		line.style.background = `linear-gradient(blueviolet 0 0) 0% 100% /100% 3px no-repeat`
 		line.style.transition = `2s, background-size 2s 1.5s`
 
 	}
