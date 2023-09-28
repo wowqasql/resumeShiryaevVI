@@ -108,3 +108,42 @@ window.addEventListener("scroll", () => {
 
 	}
 })
+
+
+function multipleBoxShadow(numberOfShadows) {
+	const shadows = [];
+	for (let i = 0; i < numberOfShadows; i++) {
+		const randomX = Math.floor(Math.random() * 2000);
+		const randomY = Math.floor(Math.random() * 2000);
+		shadows.push(`${randomX}px ${randomY}px #FFF`);
+	}
+	return shadows.join(', ');
+}
+// const smallShadows = multipleBoxShadow(700);
+// const mediumShadows = multipleBoxShadow(200);
+// const bigShadows = multipleBoxShadow(100);
+
+const stars = document.querySelector('#stars')
+stars.style.boxShadow = multipleBoxShadow(2000);
+
+const starsAfter = document.querySelector('#stars:after')
+starsAfter.style.boxShadow = multipleBoxShadow(2000);
+
+const stars2 = document.querySelector('#stars2')
+stars2.style.boxShadow = multipleBoxShadow(1000);
+
+const stars2After = document.querySelector('#stars2:after')
+stars2After.style.boxShadow = multipleBoxShadow(1000);
+
+const stars3 = document.querySelector('#stars3')
+stars3.style.boxShadow = multipleBoxShadow(2000);
+
+const stars3After = document.querySelector('#stars3:after')
+starsAfter3.style.boxShadow = multipleBoxShadow(2000);
+
+
+// 
+
+console.log(smallShadows);
+console.log(mediumShadows);
+console.log(bigShadows);
