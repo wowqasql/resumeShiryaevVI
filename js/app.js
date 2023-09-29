@@ -101,7 +101,7 @@ window.addEventListener("scroll", () => {
 		hardSkills.style.color = `#000`
 	}
 
-	if (window.scrollY >= 3050) {
+	if (window.scrollY >= 3000) {
 		const unexpected4 = document.querySelector('.unexpected-4')
 		unexpected4.style.background = `linear-gradient(#E3C53A 0 0) 0% 100% /100% 2px no-repeat`
 		unexpected4.style.transition = `2s, background-size 2s 1.5s`
@@ -109,7 +109,28 @@ window.addEventListener("scroll", () => {
 	}
 })
 
+// Comets
 
+const comets = document.querySelector('.comets')
+
+const createComet = () => {
+	console.log(comets.children.length)
+	if (comets.children.length > 100) {
+		comets.children[0].remove()
+	}
+	let cometX = Math.round(Math.random() * window.innerWidth)
+	let cometY = Math.round(Math.random() * window.innerHeight)
+	let comet = document.createElement('div')
+	comet.setAttribute('class', 'comet')
+	comet.style.left = cometX + 'px'
+	comet.style.top = cometY + 'px'
+
+	comets.append(comet)
+}
+
+setInterval(createComet, 1500)
+
+// Starts
 function multipleBoxShadow(numberOfShadows) {
 	const shadows = [];
 	for (let i = 0; i < numberOfShadows; i++) {
@@ -124,26 +145,22 @@ function multipleBoxShadow(numberOfShadows) {
 // const bigShadows = multipleBoxShadow(100);
 
 const stars = document.querySelector('#stars')
-stars.style.boxShadow = multipleBoxShadow(2000);
+stars.style.boxShadow = multipleBoxShadow(1500);
 
-const starsAfter = document.querySelector('#stars:after')
-starsAfter.style.boxShadow = multipleBoxShadow(2000);
+// const starsAfter = document.querySelector('#stars:after')
+// starsAfter.style.boxShadow = multipleBoxShadow(2000);
 
 const stars2 = document.querySelector('#stars2')
-stars2.style.boxShadow = multipleBoxShadow(1000);
+stars2.style.boxShadow = multipleBoxShadow(130);
 
-const stars2After = document.querySelector('#stars2:after')
-stars2After.style.boxShadow = multipleBoxShadow(1000);
+// const stars2After = document.querySelector('#stars2:after')
+// stars2After.style.boxShadow = multipleBoxShadow(1000);
 
 const stars3 = document.querySelector('#stars3')
-stars3.style.boxShadow = multipleBoxShadow(2000);
+stars3.style.boxShadow = multipleBoxShadow(200);
 
-const stars3After = document.querySelector('#stars3:after')
-starsAfter3.style.boxShadow = multipleBoxShadow(2000);
+// const stars3After = document.querySelector('#stars3:after')
+// starsAfter3.style.boxShadow = multipleBoxShadow(2000);
 
 
-// 
 
-console.log(smallShadows);
-console.log(mediumShadows);
-console.log(bigShadows);

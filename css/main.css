@@ -231,7 +231,7 @@ a {
 }
 
 .fab-action-button::after {
-  animation: fab-action-button 1000ms cubic-bezier(0.9, 0.7, 0.5, 0.9) infinite;
+  animation: fab-action-button 2000ms cubic-bezier(0.9, 0.7, 0.5, 0.9) infinite;
 }
 
 @keyframes fab-action-button {
@@ -342,11 +342,7 @@ a {
 
 /* Звезды */
 
-html {
-	height: 100%;
-	background: radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%);
-	/* overflow: hidden; */
-}
+
 #stars {
 	width: 1px;
 	height: 1px;
@@ -364,39 +360,38 @@ html {
 	opacity: 0.5;
 
 }
-#stars2 {
-	width: 2px;
-	height: 2px;
+ #stars2 {
+	width: 1.6px;
+	height: 1.6px;
 	background: transparent;
-	opacity: 0.8;
-
-	animation: animStar 100s linear infinite;
+	opacity: 1;
+	animation: animStar 200s linear infinite;
 }
 #stars2:after {
 	content: " ";
 	position: absolute;
 	top: 2000px;
-	width: 2.3px;
-	height: 2.3px;
+	width: 1.6px;
+	height: 1.6px;
 	background: transparent;
-	opacity: 0.6;
-}
+	opacity: 1;
+} 
+
 #stars3 {
 	width: 2.4px;
 	height: 2.4px;
 	background: transparent;
-	opacity: 0.7;
-	box-shadow: 1596px 1550px #FFF , 335px 631px #FFF , 1163px 1843px #FFF , 378px 403px #FFF , 1482px 823px #FFF , 979px 977px #FFF , 901px 1660px #FFF , 1173px 1964px #FFF , 807px 479px #FFF , 1098px 1286px #FFF , 697px 1652px #FFF , 457px 1137px #FFF , 387px 807px #FFF , 1730px 1603px #FFF , 627px 798px #FFF , 698px 726px #FFF , 1586px 1437px #FFF , 188px 145px #FFF , 315px 1150px #FFF , 1518px 1991px #FFF , 848px 1995px #FFF , 1156px 757px #FFF , 162px 52px #FFF , 11px 1585px #FFF , 483px 243px #FFF , 1477px 248px #FFF , 1295px 1582px #FFF , 568px 1438px #FFF , 1957px 132px #FFF , 1691px 1954px #FFF , 401px 1710px #FFF , 289px 828px #FFF , 1280px 1678px #FFF , 1963px 8px #FFF , 1823px 1230px #FFF , 338px 410px #FFF , 528px 515px #FFF , 152px 1677px #FFF , 149px 861px #FFF , 649px 324px #FFF , 1227px 1663px #FFF , 1691px 1094px #FFF , 788px 487px #FFF , 1561px 641px #FFF , 1400px 710px #FFF , 838px 1865px #FFF , 450px 1129px #FFF , 942px 1202px #FFF , 1908px 1314px #FFF , 1014px 903px #FFF , 1402px 1124px #FFF , 929px 779px #FFF , 526px 1045px #FFF , 122px 569px #FFF , 161px 790px #FFF , 471px 11px #FFF , 1694px 104px #FFF , 1229px 213px #FFF , 938px 164px #FFF , 478px 483px #FFF , 1823px 1129px #FFF , 1421px 1620px #FFF , 985px 1750px #FFF , 436px 1430px #FFF , 1324px 662px #FFF , 1329px 1289px #FFF , 554px 67px #FFF , 1588px 1806px #FFF , 54px 1595px #FFF , 1241px 675px #FFF , 1174px 1964px #FFF , 1327px 220px #FFF , 278px 1750px #FFF , 1882px 1761px #FFF , 1681px 1267px #FFF , 1360px 1340px #FFF , 1370px 462px #FFF , 1088px 900px #FFF , 907px 1371px #FFF , 1232px 1254px #FFF , 1767px 620px #FFF , 1388px 1693px #FFF , 152px 635px #FFF , 1865px 1273px #FFF , 988px 1235px #FFF , 501px 1106px #FFF , 1153px 692px #FFF , 1878px 994px #FFF , 225px 1106px #FFF , 1996px 1349px #FFF , 1854px 37px #FFF , 52px 100px #FFF , 669px 1924px #FFF , 1188px 781px #FFF , 396px 1141px #FFF , 1048px 831px #FFF , 941px 573px #FFF , 1956px 1448px #FFF , 1733px 1638px #FFF , 90px 682px #FFF;
+	opacity: 0.5;
 	animation: animStar 250s linear infinite;
 }
 #stars3:after {
 	content: " ";
 	position: absolute;
 	top: 2000px;
-	width: 2.5px;
-	height: 2.5px;
+	width: 2.7px;
+	height: 2.7px;
 	background: transparent;
-	opacity: 0.7;
+	opacity: 0.5;
 
 }
 
@@ -405,6 +400,46 @@ html {
 		transform: translateY(0px);
 	}
 	to {
-		transform: translateY(-2500px);
+		transform: translateY(-1000px);
+	}
+}
+
+
+/* Comets */
+
+/* .sky {
+	position: relative;
+	width: 100vw;
+	height: 100vh;
+	background: linear-gradient(30deg, #3C61C4, #2B2C6C);
+	background: radial-gradient(circle at bottom, #3C61C4, #2B2C6C);
+	overflow: hidden;
+} */
+.comets {
+	width: 150vw;
+	height: 150vh;
+	transform-origin: center;
+	transform: translate3D(-25vw, -25vh, 1px) rotate(65deg) scale(0.75);
+}
+.comet {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 1px;
+	height: 75vh;
+	background: linear-gradient(#fff, transparent);
+	animation: comet 3s ease-in-out forwards;
+}
+@keyframes comet {
+	0% {
+		opacity: 0;
+		transform: translateY(200%) scaleY(0);
+	}
+	50% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+		transform: translateY(0) scaleY(0.5);
 	}
 }
