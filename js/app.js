@@ -1,4 +1,6 @@
 // 3D Scroll
+var audio2 = new Audio('../media/Avatar.mp3');
+audio2.play();
 
 let zSpacing = -900,
 	lastPos = zSpacing / 5,
@@ -30,6 +32,7 @@ window.scrollTo(0, 1)
 
 let soundButton = document.querySelector('.soundbutton'),
 	audio = document.querySelector('.audio')
+audio.play()
 
 soundButton.addEventListener('click', e => {
 	soundButton.classList.toggle('paused')
@@ -253,3 +256,4 @@ start.addEventListener('click', () => {
 	})
 
 })
+

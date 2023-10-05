@@ -151,30 +151,6 @@ a {
 /* ШИРЯЕВ ВЛАДИМИР ПЕРЕЛИВАНИЕ */
 
 
-  
-.shine_first-name{
-  background: linear-gradient(to right, #4d4d4d 0, white 10%, #4d4d4d 20%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: shine_first-name 3s infinite linear;
-	/* animation-iteration-count: 1; */
-	/* animation-delay: 6s; */
-  animation-fill-mode: forwards;
-}
-
-  
-@keyframes shine_first-name {
-  0%{
-    background-position: 0
-	}
-  60%{
-    background-position: 200px
-	}
-  100%{
-    background-position: 300px
-	}
-}
-
 .shine_last-name{
 
   background: linear-gradient(to right, #4d4d4d 0, white 10%, #4d4d4d 20%);
@@ -191,10 +167,7 @@ a {
     background-position: 0
 
 	}
-  60%{
-    background-position: 100px
 
-	}
   100%{
     background-position: 300px
 
